@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2026, A New Democratic Party</title>
+    <style>
+        :root {
+            --dem-blue: #0033a0;
+            --dem-light-blue: #9fc5e8;
+            --contrast-color: #f5f5f5;
+            --section-color: #0e53a7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--dem-blue);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        
+        .intro-section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 30px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro-title {
+            color: var(--dem-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .section-title {
+            background-color: var(--section-color);
+            color: white;
+            padding: 15px 20px;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .table-container {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background-color: var(--dem-light-blue);
+            color: #333;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f7ff;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            width: 25%;
+        }
+        
+        .republican, .old-dem, .new-dem {
+            width: 35%;
+        }
+        
+        .highlight {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--dem-blue);
+            padding-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            td, th {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Project 2026</h1>
+            <p>A New Democratic Party</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro-section">
+            <h2 class="intro-title">Reclaiming Our Vision: Project 2026</h2>
+            
+            <p>For too long, the Democratic Party has operated without a cohesive strategy, reacting to Republican narratives rather than proactively defining our own. We've become a coalition of special interests without a unifying message that resonates with everyday Americans.</p>
+            
+            <p>Project 2026 represents a bold experiment: leveraging artificial intelligence to help identify patterns, analyze feedback from diverse constituencies, and craft a more coherent policy platform. By processing vast amounts of information from voting patterns, demographic trends, and historical policy outcomes, AI has helped us see beyond our echo chambers and identify blind spots in our messaging.</p>
+            
+            <p>This isn't about abandoning our core values—it's about communicating them more effectively. It's about finding common ground between progressive ideals and pragmatic solutions that improve people's lives. It's about recognizing that Americans want a party that fights for both economic opportunity and personal freedom, for both innovation and stability.</p>
+            
+            <p>The proposals outlined here aren't final pronouncements but starting points for a broader conversation about who we are and what we stand for. Some may seem controversial within our traditional base, but each is designed to build bridges to voters who have felt alienated by our rhetoric while staying true to democratic principles.</p>
+            
+            <p>Together, we can build a Democratic Party that speaks to America's hopes rather than its fears—a party ready to lead in an era of unprecedented technological and social change. Project 2026 isn't just about winning elections; it's about governing effectively in the complex reality of 21st century America.</p>
+            
+            <p style="font-weight: 600; margin-top: 30px;">Let's get to work.</p>
+        </div>
+        
+        <h2 class="section-title">Quick Contrasts with Republicans</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Global Conflicts</td>
+                        <td class="republican">Befriending Russia while berating Ukraine.</td>
+                        <td class="new-dem">Support Ukraine w/money & weapons.</td>
+                    </tr>
+                    <tr>
+                        <td>Global Alliances</td>
+                        <td class="republican">America First.</td>
+                        <td class="new-dem">America 1st and democracy over autocracy & communism. Empower North America, grow Central and South America.</td>
+                    </tr>
+                    <tr>
+                        <td>Global Expansion</td>
+                        <td class="republican">Take over Canada, Greenland, Panama Canal.</td>
+                        <td class="new-dem">This is nonsensical. Republicans can't focus on the real priorities.</td>
+                    </tr>
+                    <tr>
+                        <td>Power of Federal vs. State</td>
+                        <td class="republican">Push funding to the states and defund federal.</td>
+                        <td class="new-dem">Offer states more flexibility in execution, with federal role as support, not control.</td>
+                    </tr>
+                    <tr>
+                        <td>Federal Agency Leadership</td>
+                        <td class="republican">Hire friends and billionaires with selfish interests and sycophant loyalty, and questionable competence.</td>
+                        <td class="new-dem">Hire experienced leaders (meritocracy).</td>
+                    </tr>
+                    <tr>
+                        <td>DOGE</td>
+                        <td class="republican">DOGE is cutting agencies, programs and people without due diligence.</td>
+                        <td class="new-dem">DOGE Lite: offer rotating 6-month advisory programs, with no budget control, mandatory conflict-of-interest recusals, and transparent recommendations.</td>
+                    </tr>
+                    <tr>
+                        <td>Responsible Communication</td>
+                        <td class="republican">Insult anyone who doesn't agree with you.</td>
+                        <td class="new-dem">Stop the cancel culture, word-policing & whining. Lead with clear vision.</td>
+                    </tr>
+                    <tr>
+                        <td>Free Speech</td>
+                        <td class="republican">Criminalize pornography, "Don't Say Gay" bill, punishing dissent like the protesting of gun violence.</td>
+                        <td class="new-dem">Keep free speech. Don't ban books or prevent teaching critical race theory. Porn is protected.</td>
+                    </tr>
+                    <tr>
+                        <td>DEI Programs</td>
+                        <td class="republican">End Divisersity, Equity and Inclusion programs.</td>
+                        <td class="new-dem">Replace DEI with MEI: Meritocracy, Equity and Inclusion.</td>
+                    </tr>
+                    <tr>
+                        <td>Transgender</td>
+                        <td class="republican">Disallow transgender in sports competitions and military.</td>
+                        <td class="new-dem">Decisions for youth sports competitions are made at the local level. Allow transgender in the military.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2 class="section-title">The New Democratic Top Priorities</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jobs, Wages & Offshoring</td>
+                        <td class="old-dem">Raise minimum wage, incentivize domestic jobs, penalize offshoring via tax policy.</td>
+                        <td class="new-dem highlight">Tie wage hikes to small business support; promote "reshoring" for the working class.</td>
+                    </tr>
+                    <tr>
+                        <td>Artificial Intelligence & Robotics</td>
+                        <td class="old-dem">No position other than regulating AI ethics.</td>
+                        <td class="new-dem highlight">AI and Robots pay taxes. Profits gained via AI are shared with the citizens, not just shareholders.</td>
+                    </tr>
+                    <tr>
+                        <td>Platform Businesses & Antitrust</td>
+                        <td class="old-dem">Enforce antitrust laws against tech giants; protect consumers and competition.</td>
+                        <td class="new-dem highlight">Capitalism works best when we enforce antitrust. New legislation for platform businesses and AI companies.</td>
+                    </tr>
+                    <tr>
+                        <td>The Rural Brain Drain</td>
+                        <td class="old-dem">No position on the cycle of depopulation, economic stagnation, and populist voting patterns in rural and smaller urban districts.</td>
+                        <td class="new-dem highlight">Offer federal tax credits to companies that hire and retain high-skilled workers if they stay local post-graduation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2 class="section-title">Revised Democratic Positions</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Housing</td>
+                        <td class="old-dem">Expand affordable housing via federal subsidies and zoning reform.</td>
+                        <td class="new-dem">Pair subsidies with private incentives (e.g., tax breaks for builders) to broaden suburban support.</td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td class="old-dem">Invest heavily in public transit, EVs, and infrastructure repair.</td>
+                        <td class="new-dem">All-in on a national high-speed rail network similar to systems in Europe, Japan, and China.</td>
+                    </tr>
+                    <tr>
+                        <td>Free Trade, Fair Trade and Tariffs</td>
+                        <td class="old-dem">Support fair trade with labor/environmental standards; use targeted tariffs strategically.</td>
+                        <td class="new-dem">"Smart Trade, Not Tariffs" use tax incentives for domestic manufacturing, not blunt tariffs.</td>
+                    </tr>
+                    <tr>
+                        <td>Illegal Immigration & Borders</td>
+                        <td class="old-dem">Pathways to citizenship: 8-year citizenship track for 11M, including DACA "Dreamers; Limit ICE scope & end family separations.</td>
+                        <td class="new-dem">ICE is focused only on serious criminals. Finish the wall. Invest in more high tech sensors. Replace DACA's protections with a merit-driven system.</td>
+                    </tr>
+                    <tr>
+                        <td>Legal Immigration</td>
+                        <td class="old-dem">Increasing refugee and asylum caps, and address root causes of migration through foreign aid.</td>
+                        <td class="new-dem">Tie legal immigration to labor needs—e.g., 100K visas/year for agriculture/tech, adjustable by unemployment rates. Increase H1B, J1, O1 for "extraordinary ability" roles.</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Debt Relief</td>
+                        <td class="old-dem">Mass loan forgiveness.</td>
+                        <td class="new-dem">Stop loan forgiveness. Start low-interest refinancing for federal loans only in special circumstances.</td>
+                    </tr>
+                    <tr>
+                        <td>National Debt</td>
+                        <td class="old-dem">$1.9T American Rescue Plan and $1T Infrastructure Act (2021) spiked debt by $3T+; Protect Social Security, Medicare—adding $20T to future liabilities.</td>
+                        <td class="new-dem">Commit to a 110% debt-to-GDP cap by 2035. Achieved via 1% annual discretionary cuts. Citizens see their portion of US Debt at tax season.</td>
+                    </tr>
+                    <tr>
+                        <td>Taxes</td>
+                        <td class="old-dem">Hike corporate taxes to 28%. Doubled standard deduction to $12K.</td>
+                        <td class="new-dem">Set the corporate rate at 25%. Offer small-business tax break: 1% rate on first $100K profit, 5% on next $1M, 10% on next $10M.</td>
+                    </tr>
+                    <tr>
+                        <td>Corporate Inversion</td>
+                        <td class="old-dem">Reduced the corporate tax rate from 35% to 21% to make the U.S. HQ more competitive.</td>
+                        <td class="new-dem">Create anti-inversion rules that treat companies as U.S. entities if they have significant U.S. operations regardless of technical headquarters location.</td>
+                    </tr>
+                    <tr>
+                        <td>Social Services</td>
+                        <td class="old-dem">Push universal programs like Medicare for All ($32T over 10 years, CBO 2023).</td>
+                        <td class="new-dem">Fund core programs—e.g., $80B/year for Medicaid, $50B for SNAP—but cap growth at inflation +2%.</td>
+                    </tr>
+                    <tr>
+                        <td>National Defense & Terrorism</td>
+                        <td class="old-dem">Strong defense with focus on diplomacy, cyber threats, and targeted anti-terrorism.</td>
+                        <td class="new-dem">Cap defense at $875B/year, growing with inflation (2-3%), prioritizing modernization—e.g., $25B for AI/cyber.</td>
+                    </tr>
+                    <tr>
+                        <td>Debt & Approach to GDP</td>
+                        <td class="old-dem">Manage debt as a percentage of GDP with growth-focused investments, not just cuts.</td>
+                        <td class="new-dem">Stress debt control with growth plans (e.g., infrastructure ROI) to ease deficit hawk concerns.</td>
+                    </tr>
+                    <tr>
+                        <td>Global Shared Responsibility</td>
+                        <td class="old-dem">Lead on global issues (climate, health) via cooperation and funding international bodies.</td>
+                        <td class="new-dem">Scale back global funding rhetoric; focus on U.S.-led wins (e.g., vaccine tech) to counter "America last" fears.</td>
+                    </tr>
+                    <tr>
+                        <td>Climate & Energy</td>
+                        <td class="old-dem">Transition to renewables; phase out fossil fuels with worker support.</td>
+                        <td class="new-dem">Blend renewables with "all-of-the-above" energy but with a full-force revival of nuclear energy.</td>
+                    </tr>
+                    <tr>
+                        <td>Education</td>
+                        <td class="old-dem">Increase public education funding, universal pre-K, affordable college.</td>
+                        <td class="new-dem">Add vocational training and apprenticeship focus to win working-class families and youth.</td>
+                    </tr>
+                    <tr>
+                        <td>Illegal Drugs</td>
+                        <td class="old-dem">Decriminalize marijuana, focus on treatment over punishment for addiction.</td>
+                        <td class="new-dem">Push marijuana legalization as a state revenue win; frame treatment as "tough on crime" via recovery.</td>
+                    </tr>
+                    <tr>
+                        <td>Law Enforcement</td>
+                        <td class="old-dem">Reform the police; focus on racial bias and excessive use of force.</td>
+                        <td class="new-dem">Fund the police, fix the issues. Back the blue, while addressing underlying crime concerns.</td>
+                    </tr>
+                    <tr>
+                        <td>Socialism vs Capitalism</td>
+                        <td class="old-dem">Okay to have socialists in the party and to belittle the value of capitalism.</td>
+                        <td class="new-dem">Strong, clear support for capitalism.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2 class="section-title">Constitutional Concerns</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abortion</td>
+                        <td class="old-dem">Protect reproductive rights as a federal guarantee; codify Roe v. Wade principles.</td>
+                        <td class="new-dem">Defend choice but allow state nuance (e.g., late-term limits) to soften opposition in red-leaning areas.</td>
+                    </tr>
+                    <tr>
+                        <td>Freedom of Speech</td>
+                        <td class="old-dem">Defend speech but regulate hate speech and misinformation online.</td>
+                        <td class="new-dem">Drop heavy regulation talk; focus on platform accountability to misinformation, appealing to free speech fans.</td>
+                    </tr>
+                    <tr>
+                        <td>LGBTQ</td>
+                        <td class="old-dem">Expand federal protections for marriage, employment, and identity.</td>
+                        <td class="new-dem">Keep protections but pivot to "equality for all" framing, avoiding culture war traps to win moderates.</td>
+                    </tr>
+                    <tr>
+                        <td>Unhoused Citizens</td>
+                        <td class="old-dem">Fund housing-first programs and social services to address root causes. Allow/enable unhealthy encampments.</td>
+                        <td class="new-dem">Add work requirements to housing aid; pitch it as "hand up, not handout" to counter welfare critiques. No camping - tiered government housing.</td>
+                    </tr>
+                    <tr>
+                        <td>Affirmative Action</td>
+                        <td class="old-dem">Fight to preserve race-based admissions. Extend to jobs, contracts, (10% federal contracts for minority-owned firms).</td>
+                        <td class="new-dem">Shift to socioeconomic boosts—e.g., prioritize aid/admissions for first-gen, low-income students ($75K household cap), regardless of race.</td>
+                    </tr>
+                    <tr>
+                        <td>Guns & Right to Bear Arms</td>
+                        <td class="old-dem">Universal background checks, assault weapon bans, and red flag laws.</td>
+                        <td class="new-dem">No change.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <footer>
+            Project 2026: A New Democratic Party
+        </footer>
+    </div>
+</body>
+</html>
