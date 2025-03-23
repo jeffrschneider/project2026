@@ -104,13 +104,8 @@
             vertical-align: top;
         }
         
-        td:first-child {
-            font-weight: 600;
-            width: 15%;
-        }
-        
         .republican, .old-dem, .new-dem {
-            width: 42.5%;
+            width: 50%;
         }
         
         .highlight {
@@ -127,40 +122,22 @@
             font-size: 0.9rem;
         }
         
-        /* Drawer functionality */
-        .cell-content {
-            position: relative;
+        .issue-header {
+            background-color: var(--dem-blue);
+            color: white;
+            padding: 10px 15px;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 5px 5px 0 0;
         }
         
-        .cell-summary {
-            cursor: pointer;
-            position: relative;
-            padding-right: 20px;
-        }
-        
-        .cell-summary:after {
-            content: "▼";
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 0.8rem;
-            color: var(--dem-blue);
-        }
-        
-        .cell-expanded {
-            display: none;
-            margin-top: 10px;
-            padding-top: 10px;
+        .expanded-content {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding-top: 8px;
             border-top: 1px dashed #ccc;
-            font-size: 0.95rem;
-        }
-        
-        .cell-content.active .cell-expanded {
-            display: block;
-        }
-        
-        .cell-content.active .cell-summary:after {
-            content: "▲";
+            color: #555;
         }
         
         @media (max-width: 768px) {
@@ -208,14 +185,9 @@
                 font-weight: 600;
             }
             
-            /* Adding labels for mobile view */
-            td:nth-of-type(1):before { content: "Issue"; }
-            td:nth-of-type(2):before { content: "Republican/Old Position"; }
-            td:nth-of-type(3):before { content: "Democratic/New Position"; }
-            
-            td:first-child {
-                width: auto;
-            }
+            /* Adjusted labels for mobile view */
+            td:nth-of-type(1):before { content: "Republican Position"; }
+            td:nth-of-type(2):before { content: "Democratic Position"; }
         }
     </style>
 </head>
@@ -245,203 +217,280 @@
         </div>
         
         <h2 class="section-title">Quick Contrasts with Republicans</h2>
+        
+        <div class="issue-header">Global Conflicts</div>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Issue</th>
                         <th>Republican Position</th>
                         <th>Democratic Position</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Global Conflicts</td>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Befriending Russia while berating Ukraine.</div>
-                                <div class="cell-expanded">
-                                    Republican policies have increasingly favored a non-interventionist approach with Russia despite its aggression. Their position includes skepticism toward Ukraine aid packages and NATO funding obligations. Some Republican voices have openly praised Putin's leadership style while questioning Ukraine's democratic legitimacy. This approach undermines decades of bipartisan foreign policy consensus on containing Russian expansion.
-                                </div>
+                            Befriending Russia while berating Ukraine.
+                            <div class="expanded-content">
+                                Republican policies have increasingly favored a non-interventionist approach with Russia despite its aggression. Their position includes skepticism toward Ukraine aid packages and NATO funding obligations. Some Republican voices have openly praised Putin's leadership style while questioning Ukraine's democratic legitimacy. This approach undermines decades of bipartisan foreign policy consensus on containing Russian expansion.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Support Ukraine w/money & weapons.</div>
-                                <div class="cell-expanded">
-                                    Democrats remain committed to funding Ukraine's defense through weapons systems, intelligence sharing, and economic aid packages. This position maintains the post-WWII international order that prevents powerful countries from annexing their neighbors. Democrats recognize that containing Russian aggression now prevents more costly confrontations later. A strong stance against Russia also reinforces NATO alliance stability and American leadership.
-                                </div>
+                            Support Ukraine w/money & weapons.
+                            <div class="expanded-content">
+                                Democrats remain committed to funding Ukraine's defense through weapons systems, intelligence sharing, and economic aid packages. This position maintains the post-WWII international order that prevents powerful countries from annexing their neighbors. Democrats recognize that containing Russian aggression now prevents more costly confrontations later. A strong stance against Russia also reinforces NATO alliance stability and American leadership.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Global Alliances</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Global Alliances</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">America First.</div>
-                                <div class="cell-expanded">
-                                    The "America First" doctrine prioritizes nationalism over multilateralism in all international dealings. This approach often involves criticism of international organizations like the UN, WHO, and NATO as constraints on American sovereignty. Republicans increasingly favor bilateral deals that visibly benefit American interests over complex multilateral arrangements. This position often leads to unpredictable foreign policy shifts that weaken long-standing diplomatic relationships.
-                                </div>
+                            America First.
+                            <div class="expanded-content">
+                                The "America First" doctrine prioritizes nationalism over multilateralism in all international dealings. This approach often involves criticism of international organizations like the UN, WHO, and NATO as constraints on American sovereignty. Republicans increasingly favor bilateral deals that visibly benefit American interests over complex multilateral arrangements. This position often leads to unpredictable foreign policy shifts that weaken long-standing diplomatic relationships.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">America 1st and democracy over autocracy & communism. Empower North America, grow Central and South America.</div>
-                                <div class="cell-expanded">
-                                    Democrats champion American leadership while strengthening democratic alliances globally against authoritarian regimes. This approach involves deepening economic integration within North America while investing in stable democracy throughout Latin America. Democrats recognize that prosperous, stable neighbors reduce migration pressures and create export markets for American goods. This regional focus creates a democratic counterweight to China's expanding global influence.
-                                </div>
+                            America 1st and democracy over autocracy & communism. Empower North America, grow Central and South America.
+                            <div class="expanded-content">
+                                Democrats champion American leadership while strengthening democratic alliances globally against authoritarian regimes. This approach involves deepening economic integration within North America while investing in stable democracy throughout Latin America. Democrats recognize that prosperous, stable neighbors reduce migration pressures and create export markets for American goods. This regional focus creates a democratic counterweight to China's expanding global influence.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Global Expansion</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Global Expansion</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Take over Canada, Greenland, Panama Canal.</div>
-                                <div class="cell-expanded">
-                                    Some Republican figures have floated unrealistic proposals about territorial expansion, including annexing Greenland and reclaiming the Panama Canal. These statements reflect a nostalgic view of American imperialism that ignores modern geopolitical realities. Such rhetoric damages relationships with key allies and trading partners while creating diplomatic incidents. These positions demonstrate a concerning disregard for international law and sovereignty principles.
-                                </div>
+                            Take over Canada, Greenland, Panama Canal.
+                            <div class="expanded-content">
+                                Some Republican figures have floated unrealistic proposals about territorial expansion, including annexing Greenland and reclaiming the Panama Canal. These statements reflect a nostalgic view of American imperialism that ignores modern geopolitical realities. Such rhetoric damages relationships with key allies and trading partners while creating diplomatic incidents. These positions demonstrate a concerning disregard for international law and sovereignty principles.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">This is nonsensical. Republicans can't focus on the real priorities.</div>
-                                <div class="cell-expanded">
-                                    Democrats reject territorial expansionism as a distraction from genuine national security challenges like climate change and cyber threats. Democrats focus on building partnerships rather than pursuing outdated colonial ambitions. Cooperative rather than coercive relationships with neighbors create more sustainable security benefits. Democrats recognize that in a connected world, influence comes through economic and cultural soft power, not territorial control.
-                                </div>
+                            This is nonsensical. Republicans can't focus on the real priorities.
+                            <div class="expanded-content">
+                                Democrats reject territorial expansionism as a distraction from genuine national security challenges like climate change and cyber threats. Democrats focus on building partnerships rather than pursuing outdated colonial ambitions. Cooperative rather than coercive relationships with neighbors create more sustainable security benefits. Democrats recognize that in a connected world, influence comes through economic and cultural soft power, not territorial control.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Power of Federal vs. State</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Power of Federal vs. State</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Push funding to the states and defund federal.</div>
-                                <div class="cell-expanded">
-                                    Republicans consistently advocate slashing federal programs while sending block grants to states with minimal oversight. This approach creates a patchwork of inconsistent standards and services across states. Lower-income states often lack resources to replace cut federal programs, increasing inequality. This position is often selective, with federal authority still invoked for Republican priorities like abortion restrictions.
-                                </div>
+                            Push funding to the states and defund federal.
+                            <div class="expanded-content">
+                                Republicans consistently advocate slashing federal programs while sending block grants to states with minimal oversight. This approach creates a patchwork of inconsistent standards and services across states. Lower-income states often lack resources to replace cut federal programs, increasing inequality. This position is often selective, with federal authority still invoked for Republican priorities like abortion restrictions.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Offer states more flexibility in execution, with federal role as support, not control.</div>
-                                <div class="cell-expanded">
-                                    Democrats recognize the value of federalism while maintaining essential national standards and support. This balanced approach allows states to innovate within frameworks that guarantee basic rights and services to all Americans. Federal resources remain available to support states facing economic challenges or natural disasters. Democrats champion effective partnerships between levels of government rather than adversarial relationships.
-                                </div>
+                            Offer states more flexibility in execution, with federal role as support, not control.
+                            <div class="expanded-content">
+                                Democrats recognize the value of federalism while maintaining essential national standards and support. This balanced approach allows states to innovate within frameworks that guarantee basic rights and services to all Americans. Federal resources remain available to support states facing economic challenges or natural disasters. Democrats champion effective partnerships between levels of government rather than adversarial relationships.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Federal Agency Leadership</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Federal Agency Leadership</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Hire friends and billionaires with selfish interests and sycophant loyalty, and questionable competence.</div>
-                                <div class="cell-expanded">
-                                    Republican administrations increasingly appoint officials based on personal loyalty and ideological alignment rather than relevant expertise. Many appointees come from industries they're tasked with regulating, creating obvious conflicts of interest. These officials often lack basic understanding of the agencies they lead, hampering effective governance. This approach prioritizes dismantling regulations over effective public service.
-                                </div>
+                            Hire friends and billionaires with selfish interests and sycophant loyalty, and questionable competence.
+                            <div class="expanded-content">
+                                Republican administrations increasingly appoint officials based on personal loyalty and ideological alignment rather than relevant expertise. Many appointees come from industries they're tasked with regulating, creating obvious conflicts of interest. These officials often lack basic understanding of the agencies they lead, hampering effective governance. This approach prioritizes dismantling regulations over effective public service.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Hire experienced leaders (meritocracy).</div>
-                                <div class="cell-expanded">
-                                    Democrats prioritize relevant expertise, professional qualifications, and domain knowledge when appointing agency leaders. Agency effectiveness improves when leaders understand the mission, laws, and technical aspects of their departments. Meritocratic appointments create more stable, professional government services regardless of which party holds power. Experienced leadership also reduces costly errors and implementation failures in critical programs.
-                                </div>
+                            Hire experienced leaders (meritocracy).
+                            <div class="expanded-content">
+                                Democrats prioritize relevant expertise, professional qualifications, and domain knowledge when appointing agency leaders. Agency effectiveness improves when leaders understand the mission, laws, and technical aspects of their departments. Meritocratic appointments create more stable, professional government services regardless of which party holds power. Experienced leadership also reduces costly errors and implementation failures in critical programs.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">DOGE</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>DOGE</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">DOGE is cutting agencies, programs and people without due diligence.</div>
-                                <div class="cell-expanded">
-                                    The Department of Government Efficiency (DOGE) approach involves sweeping cuts without thorough analysis of consequences or alternatives. These cuts often target agencies based on ideological objections rather than performance metrics. The approach risks eliminating valuable programs with high returns on investment for taxpayers. Such hasty restructuring creates institutional chaos that actually reduces government efficiency.
-                                </div>
+                            DOGE is cutting agencies, programs and people without due diligence.
+                            <div class="expanded-content">
+                                The Department of Government Efficiency (DOGE) approach involves sweeping cuts without thorough analysis of consequences or alternatives. These cuts often target agencies based on ideological objections rather than performance metrics. The approach risks eliminating valuable programs with high returns on investment for taxpayers. Such hasty restructuring creates institutional chaos that actually reduces government efficiency.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">DOGE Lite: offer rotating 6-month advisory programs, with no budget control, mandatory conflict-of-interest recusals, and transparent recommendations.</div>
-                                <div class="cell-expanded">
-                                    Democrats advocate for smart government reform through expert advisory panels with strict ethical guidelines. This approach leverages outside expertise while maintaining democratic accountability and transparency. Regular rotation prevents capture by special interests and brings fresh perspectives to longstanding issues. Recommendations are subject to public debate and legislative approval rather than unilateral implementation.
-                                </div>
+                            DOGE Lite: offer rotating 6-month advisory programs, with no budget control, mandatory conflict-of-interest recusals, and transparent recommendations.
+                            <div class="expanded-content">
+                                Democrats advocate for smart government reform through expert advisory panels with strict ethical guidelines. This approach leverages outside expertise while maintaining democratic accountability and transparency. Regular rotation prevents capture by special interests and brings fresh perspectives to longstanding issues. Recommendations are subject to public debate and legislative approval rather than unilateral implementation.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Responsible Communication</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Responsible Communication</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Insult anyone who doesn't agree with you.</div>
-                                <div class="cell-expanded">
-                                    Republican rhetoric increasingly relies on personal attacks and degrading language toward political opponents and critics. This approach prioritizes emotional engagement over substantive policy discussion, polarizing the electorate. Such communication style sets a harmful example for political discourse and public behavior. This antagonistic approach makes compromise and bipartisan solutions nearly impossible.
-                                </div>
+                            Insult anyone who doesn't agree with you.
+                            <div class="expanded-content">
+                                Republican rhetoric increasingly relies on personal attacks and degrading language toward political opponents and critics. This approach prioritizes emotional engagement over substantive policy discussion, polarizing the electorate. Such communication style sets a harmful example for political discourse and public behavior. This antagonistic approach makes compromise and bipartisan solutions nearly impossible.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Stop the cancel culture, word-policing & whining. Lead with clear vision.</div>
-                                <div class="cell-expanded">
-                                    Democrats are shifting toward more direct, accessible communication focused on practical solutions rather than ideological purity tests. This approach acknowledges legitimate disagreements while focusing on shared goals and common ground. Respectful but straightforward communication builds broader coalitions across demographic and ideological lines. Substantive leadership focused on vision and results resonates more with voters than moral posturing.
-                                </div>
+                            Stop the cancel culture, word-policing & whining. Lead with clear vision.
+                            <div class="expanded-content">
+                                Democrats are shifting toward more direct, accessible communication focused on practical solutions rather than ideological purity tests. This approach acknowledges legitimate disagreements while focusing on shared goals and common ground. Respectful but straightforward communication builds broader coalitions across demographic and ideological lines. Substantive leadership focused on vision and results resonates more with voters than moral posturing.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Free Speech</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Free Speech</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Criminalize pornography, "Don't Say Gay" bill, punishing dissent like the protesting of gun violence.</div>
-                                <div class="cell-expanded">
-                                    Despite rhetoric about free speech, Republican policies often restrict expression on issues like LGBTQ+ identities, racial history, and political protest. School libraries face unprecedented book bans targeting works that discuss sexuality or racial issues. Speech protections are selectively applied, favoring corporate and conservative speech while restricting progressive expression. Many Republican-led states criminalize certain forms of protest while expanding protections for counter-protesters.
-                                </div>
+                            Criminalize pornography, "Don't Say Gay" bill, punishing dissent like the protesting of gun violence.
+                            <div class="expanded-content">
+                                Despite rhetoric about free speech, Republican policies often restrict expression on issues like LGBTQ+ identities, racial history, and political protest. School libraries face unprecedented book bans targeting works that discuss sexuality or racial issues. Speech protections are selectively applied, favoring corporate and conservative speech while restricting progressive expression. Many Republican-led states criminalize certain forms of protest while expanding protections for counter-protesters.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Keep free speech. Don't ban books or prevent teaching critical race theory. Porn is protected.</div>
-                                <div class="cell-expanded">
-                                    Democrats defend consistent free speech principles across political viewpoints and topics. This position recognizes that open discourse, even on difficult subjects, strengthens democracy and societal progress. Democratic policies protect artistic and academic freedom from government censorship. Protection extends to controversial but legally protected speech, with content decisions left to individuals, parents, and communities rather than government mandate.
-                                </div>
+                            Keep free speech. Don't ban books or prevent teaching critical race theory. Porn is protected.
+                            <div class="expanded-content">
+                                Democrats defend consistent free speech principles across political viewpoints and topics. This position recognizes that open discourse, even on difficult subjects, strengthens democracy and societal progress. Democratic policies protect artistic and academic freedom from government censorship. Protection extends to controversial but legally protected speech, with content decisions left to individuals, parents, and communities rather than government mandate.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">DEI Programs</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>DEI Programs</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">End Divisersity, Equity and Inclusion programs.</div>
-                                <div class="cell-expanded">
-                                    Republicans characterize DEI initiatives as divisive and unfair, promoting their elimination across government, education, and corporations. This position rejects systemic explanations for persistent disparities in American society. It often portrays diversity efforts as inherently discriminatory against white Americans. This approach ignores how inclusive environments improve organizational performance and innovation.
-                                </div>
+                            End Divisersity, Equity and Inclusion programs.
+                            <div class="expanded-content">
+                                Republicans characterize DEI initiatives as divisive and unfair, promoting their elimination across government, education, and corporations. This position rejects systemic explanations for persistent disparities in American society. It often portrays diversity efforts as inherently discriminatory against white Americans. This approach ignores how inclusive environments improve organizational performance and innovation.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Replace DEI with MEI: Meritocracy, Equity and Inclusion.</div>
-                                <div class="cell-expanded">
-                                    Democrats propose reframing inclusion efforts around universal principles of merit and fairness while maintaining commitment to diverse representation. This approach emphasizes creating systems where talent can rise regardless of background or identity. MEI programs focus on removing structural barriers to opportunity rather than demographic quotas. This framing responds to legitimate concerns about fairness while continuing progress toward greater representation.
-                                </div>
+                            Replace DEI with MEI: Meritocracy, Equity and Inclusion.
+                            <div class="expanded-content">
+                                Democrats propose reframing inclusion efforts around universal principles of merit and fairness while maintaining commitment to diverse representation. This approach emphasizes creating systems where talent can rise regardless of background or identity. MEI programs focus on removing structural barriers to opportunity rather than demographic quotas. This framing responds to legitimate concerns about fairness while continuing progress toward greater representation.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Transgender</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Transgender</td>
+                        <th>Republican Position</th>
+                        <th>Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="republican">
-                            <div class="cell-content">
-                                <div class="cell-summary">Disallow transgender in sports competitions and military.</div>
-                                <div class="cell-expanded">
-                                    Republican policies seek broad bans on transgender participation in athletics and military service regardless of individual circumstances. These positions often extend beyond reasonable competitive concerns to fundamental questions of identity recognition. Policy approaches tend to be blanket prohibitions rather than nuanced guidelines based on relevant factors. Such positions are often justified using outdated or selective medical claims.
-                                </div>
+                            Disallow transgender in sports competitions and military.
+                            <div class="expanded-content">
+                                Republican policies seek broad bans on transgender participation in athletics and military service regardless of individual circumstances. These positions often extend beyond reasonable competitive concerns to fundamental questions of identity recognition. Policy approaches tend to be blanket prohibitions rather than nuanced guidelines based on relevant factors. Such positions are often justified using outdated or selective medical claims.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Decisions for youth sports competitions are made at the local level. Allow transgender in the military.</div>
-                                <div class="cell-expanded">
-                                    Democrats advocate for allowing transgender military service based on capability and readiness, not identity. For athletics, Democrats support local decision-making that balances inclusivity with competitive fairness considerations. This approach recognizes the complexity of these issues and rejects one-size-fits-all federal mandates. It respects transgender individuals' dignity while acknowledging legitimate stakeholder concerns about specific contexts.
-                                </div>
+                            Decisions for youth sports competitions are made at the local level. Allow transgender in the military.
+                            <div class="expanded-content">
+                                Democrats advocate for allowing transgender military service based on capability and readiness, not identity. For athletics, Democrats support local decision-making that balances inclusivity with competitive fairness considerations. This approach recognizes the complexity of these issues and rejects one-size-fits-all federal mandates. It respects transgender individuals' dignity while acknowledging legitimate stakeholder concerns about specific contexts.
                             </div>
                         </td>
                     </tr>
@@ -450,322 +499,363 @@
         </div>
         
         <h2 class="section-title">The New Democratic Top Priorities</h2>
+        
+        <div class="issue-header">Jobs, Wages & Offshoring</div>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Issue</th>
                         <th>Old Democratic Position</th>
                         <th>New Democratic Position</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jobs, Wages & Offshoring</td>
                         <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Raise minimum wage, incentivize domestic jobs, penalize offshoring via tax policy.</div>
-                                <div class="cell-expanded">
-                                    Traditional Democratic approaches focused on across-the-board wage increases regardless of local economic conditions or business size. This approach relied heavily on tax penalties for companies moving operations overseas. Such policies were often applied uniformly without considering the diverse needs of different industries and regions. This sometimes created unintended burdens on small businesses in lower-cost regions.
-                                </div>
+                            Raise minimum wage, incentivize domestic jobs, penalize offshoring via tax policy.
+                            <div class="expanded-content">
+                                Traditional Democratic approaches focused on across-the-board wage increases regardless of local economic conditions or business size. This approach relied heavily on tax penalties for companies moving operations overseas. Such policies were often applied uniformly without considering the diverse needs of different industries and regions. This sometimes created unintended burdens on small businesses in lower-cost regions.
                             </div>
                         </td>
                         <td class="new-dem highlight">
-                            <div class="cell-content">
-                                <div class="cell-summary">Tie wage hikes to small business support; promote "reshoring" for the working class.</div>
-                                <div class="cell-expanded">
-                                    The new approach balances worker wage protections with targeted support for smaller employers to manage increased labor costs. This includes tax incentives, regulatory simplification, and transition assistance specifically for small businesses. Reshoring initiatives focus on rebuilding manufacturing capacity in former industrial communities with declining populations. These policies create pathways to middle-class stability through skills training matched to actual employer needs.
-                                </div>
+                            Tie wage hikes to small business support; promote "reshoring" for the working class.
+                            <div class="expanded-content">
+                                The new approach balances worker wage protections with targeted support for smaller employers to manage increased labor costs. This includes tax incentives, regulatory simplification, and transition assistance specifically for small businesses. Reshoring initiatives focus on rebuilding manufacturing capacity in former industrial communities with declining populations. These policies create pathways to middle-class stability through skills training matched to actual employer needs.
                             </div>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Artificial Intelligence & Robotics</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Artificial Intelligence & Robotics</td>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">No position other than regulating AI ethics.</div>
-                                <div class="cell-expanded">
-                                    Democrats previously lacked coherent policy on AI economic impacts, focusing narrowly on preventing algorithmic bias and privacy concerns. This approach failed to address the fundamental economic disruption AI would bring to labor markets. The limited focus on ethics without economic planning risked leaving workers vulnerable to technological displacement. It also ceded economic leadership on a transformative technology to other nations.
-                                </div>
+                            No position other than regulating AI ethics.
+                            <div class="expanded-content">
+                                Democrats previously lacked coherent policy on AI economic impacts, focusing narrowly on preventing algorithmic bias and privacy concerns. This approach failed to address the fundamental economic disruption AI would bring to labor markets. The limited focus on ethics without economic planning risked leaving workers vulnerable to technological displacement. It also ceded economic leadership on a transformative technology to other nations.
                             </div>
                         </td>
                         <td class="new-dem highlight">
-                            <div class="cell-content">
-                                <div class="cell-summary">AI and Robots pay taxes. Profits gained via AI are shared with the citizens, not just shareholders.</div>
-                                <div class="cell-expanded">
-                                    Democrats now propose a comprehensive approach that treats automation as a taxable asset, similar to human labor. Revenue from automation taxes funds worker retraining, education, and potentially a universal basic income. This framework ensures productivity gains from AI are distributed throughout society rather than concentrated. The policy includes targeted assistance for communities most impacted by automation-related job losses.
-                                </div>
+                            AI and Robots pay taxes. Profits gained via AI are shared with the citizens, not just shareholders.
+                            <div class="expanded-content">
+                                Democrats now propose a comprehensive approach that treats automation as a taxable asset, similar to human labor. Revenue from automation taxes funds worker retraining, education, and potentially a universal basic income. This framework ensures productivity gains from AI are distributed throughout society rather than concentrated. The policy includes targeted assistance for communities most impacted by automation-related job losses.
                             </div>
                         </td>
-                    </tr>>
-                        <td>Artificial Intelligence & Robotics</td>
-                        <td class="old-dem">No position other than regulating AI ethics.</td>
-                        <td class="new-dem highlight">AI and Robots pay taxes. Profits gained via AI are shared with the citizens, not just shareholders.</td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Platform Businesses & Antitrust</div>
+        <div class="table-container">
+            <table>
+                <thead>
                     <tr>
-                        <td>Platform Businesses & Antitrust</td>
-                        <td class="old-dem">Enforce antitrust laws against tech giants; protect consumers and competition.</td>
-                        <td class="new-dem highlight">Capitalism works best when we enforce antitrust. New legislation for platform businesses and AI companies.</td>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
-                        <td>The Rural Brain Drain</td>
-                        <td class="old-dem">No position on the cycle of depopulation, economic stagnation, and populist voting patterns in rural and smaller urban districts.</td>
-                        <td class="new-dem highlight">Offer federal tax credits to companies that hire and retain high-skilled workers if they stay local post-graduation.</td>
+                        <td class="old-dem">
+                            Enforce antitrust laws against tech giants; protect consumers and competition.
+                        </td>
+                        <td class="new-dem highlight">
+                            Capitalism works best when we enforce antitrust. New legislation for platform businesses and AI companies.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">The Rural Brain Drain</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            No position on the cycle of depopulation, economic stagnation, and populist voting patterns in rural and smaller urban districts.
+                        </td>
+                        <td class="new-dem highlight">
+                            Offer federal tax credits to companies that hire and retain high-skilled workers if they stay local post-graduation.
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
         <h2 class="section-title">Revised Democratic Positions</h2>
+        
+        <div class="issue-header">Housing</div>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Issue</th>
                         <th>Old Democratic Position</th>
                         <th>New Democratic Position</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Housing</td>
                         <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Expand affordable housing via federal subsidies and zoning reform.</div>
-                                <div class="cell-expanded">
-                                    Traditional Democratic housing policy relied heavily on direct federal funding of affordable housing projects in urban areas. This approach often faced local resistance from homeowners concerned about property values and neighborhood change. Past policies sometimes created concentrated poverty through poor project placement and design. Zoning reform efforts were often perceived as federal overreach into local control.
-                                </div>
+                            Expand affordable housing via federal subsidies and zoning reform.
+                            <div class="expanded-content">
+                                Traditional Democratic housing policy relied heavily on direct federal funding of affordable housing projects in urban areas. This approach often faced local resistance from homeowners concerned about property values and neighborhood change. Past policies sometimes created concentrated poverty through poor project placement and design. Zoning reform efforts were often perceived as federal overreach into local control.
                             </div>
                         </td>
                         <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Pair subsidies with private incentives (e.g., tax breaks for builders) to broaden suburban support.</div>
-                                <div class="cell-expanded">
-                                    The new approach balances affordable housing goals with market incentives and suburban homeowner concerns. Tax credits for developers building mixed-income housing increase supply without relying solely on government construction. Incremental density increases through accessory dwelling units and modest multi-family options preserve neighborhood character while addressing housing shortages. This balanced approach builds broader political support for addressing housing affordability.
-                                </div>
+                            Pair subsidies with private incentives (e.g., tax breaks for builders) to broaden suburban support.
+                            <div class="expanded-content">
+                                The new approach balances affordable housing goals with market incentives and suburban homeowner concerns. Tax credits for developers building mixed-income housing increase supply without relying solely on government construction. Incremental density increases through accessory dwelling units and modest multi-family options preserve neighborhood character while addressing housing shortages. This balanced approach builds broader political support for addressing housing affordability.
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Transportation</td>
-                        <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Invest heavily in public transit, EVs, and infrastructure repair.</div>
-                                <div class="cell-expanded">
-                                    Democrats traditionally spread transportation funding across many competing priorities without clear national vision. This approach often failed to create transformative systems that could compete with private automobile convenience. Public transit initiatives frequently faced cost overruns and operational inefficiencies. EV incentives primarily benefited higher-income households that could afford premium electric vehicles.
-                                </div>
-                            </div>
-                        </td>
-                        <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">All-in on a national high-speed rail network similar to systems in Europe, Japan, and China.</div>
-                                <div class="cell-expanded">
-                                    Democrats now prioritize building a world-class high-speed rail system connecting major population centers. This bold infrastructure vision creates hundreds of thousands of construction and manufacturing jobs across multiple states. Completed networks would reduce carbon emissions while boosting economic productivity through improved mobility. This approach competes directly with China's infrastructure investments with a distinctly American vision.
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Free Trade, Fair Trade and Tariffs</td>
-                        <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Support fair trade with labor/environmental standards; use targeted tariffs strategically.</div>
-                                <div class="cell-expanded">
-                                    Previous Democratic trade positions tried balancing free trade principles with labor and environmental protections. This approach often faced criticism from both business interests concerned about competitiveness and labor groups worried about job losses. Policy positions frequently appeared inconsistent, shifting based on constituent pressures. Trade deals contained standards that were difficult to enforce effectively.
-                                </div>
-                            </div>
-                        </td>
-                        <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">"Smart Trade, Not Tariffs" use tax incentives for domestic manufacturing, not blunt tariffs.</div>
-                                <div class="cell-expanded">
-                                    The new Democratic approach shifts from punitive tariffs to proactive incentives for domestic production through tax policy. This framework emphasizes positive inducements for reshoring rather than penalties for offshoring. Trade policy explicitly prioritizes strategic supply chains in areas like semiconductors, pharmaceuticals, and clean energy. The approach includes robust worker retraining programs for those displaced by remaining trade impacts.
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Illegal Immigration & Borders</td>
-                        <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Pathways to citizenship: 8-year citizenship track for 11M, including DACA "Dreamers; Limit ICE scope & end family separations.</div>
-                                <div class="cell-expanded">
-                                    Traditional Democratic immigration policy focused primarily on legalization pathways with less emphasis on border security enforcement. This approach faced significant political obstacles and appeared to prioritize undocumented immigrants over border community concerns. Policy positions often failed to acknowledge legitimate security and resource challenges created by irregular migration. This created vulnerability to accusations of supporting "open borders."
-                                </div>
-                            </div>
-                        </td>
-                        <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">ICE is focused only on serious criminals. Finish the wall. Invest in more high tech sensors. Replace DACA's protections with a merit-driven system.</div>
-                                <div class="cell-expanded">
-                                    The new approach balances enhanced physical and technological border security with targeted enforcement priorities. This position acknowledges border communities' concerns while maintaining humane treatment of migrants and asylum seekers. Merit-based immigration reforms focus on skills, education, and economic contributions rather than family ties alone. This balanced framework addresses both security and economic needs while being less politically divisive.
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Legal Immigration</td>
-                        <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Increasing refugee and asylum caps, and address root causes of migration through foreign aid.</div>
-                                <div class="cell-expanded">
-                                    Previous Democratic positions emphasized humanitarian concerns with less focus on economic and workforce needs. This approach often seemed disconnected from domestic labor market realities and skills gaps. Foreign aid programs to address "root causes" showed limited effectiveness despite significant investment. Policy failed to create political consensus around legal immigration reforms.
-                                </div>
-                            </div>
-                        </td>
-                        <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Tie legal immigration to labor needs—e.g., 100K visas/year for agriculture/tech, adjustable by unemployment rates. Increase H1B, J1, O1 for "extraordinary ability" roles.</div>
-                                <div class="cell-expanded">
-                                    Democrats now advocate for a dynamic immigration system responding to actual labor market needs across skill levels. Visa allocations adjust based on economic conditions and specific industry requirements. The approach prioritizes attraction and retention of top global talent while also addressing agricultural and service sector labor needs. This framework builds broader support by directly connecting immigration to economic prosperity.
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Personal Debt Relief</td>
-                        <td class="old-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Mass loan forgiveness.</div>
-                                <div class="cell-expanded">
-                                    Previous Democratic positions focused on broad student loan forgiveness regardless of income or career choices. This approach faced criticism for benefiting higher-income college graduates at taxpayer expense. Policy failed to address underlying costs driving student debt accumulation. This position appeared to favor college-educated voters over those without degrees.
-                                </div>
-                            </div>
-                        </td>
-                        <td class="new-dem">
-                            <div class="cell-content">
-                                <div class="cell-summary">Stop loan forgiveness. Start low-interest refinancing for federal loans only in special circumstances.</div>
-                                <div class="cell-expanded">
-                                    The new approach focuses on targeted relief through refinancing options rather than blanket forgiveness. This position addresses genuine hardship cases while maintaining loan repayment expectations for those who can afford it. Policy includes expanded income-based repayment options with reasonable caps on monthly payments. This balanced approach is more fiscally responsible while still addressing the most serious debt burdens.
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>National Debt</td>
-                        <td class="old-dem">$1.9T American Rescue Plan and $1T Infrastructure Act (2021) spiked debt by $3T+; Protect Social Security, Medicare—adding $20T to future liabilities.</td>
-                        <td class="new-dem">Commit to a 110% debt-to-GDP cap by 2035. Achieved via 1% annual discretionary cuts. Citizens see their portion of US Debt at tax season.</td>
-                    </tr>
-                    <tr>
-                        <td>Taxes</td>
-                        <td class="old-dem">Hike corporate taxes to 28%. Doubled standard deduction to $12K.</td>
-                        <td class="new-dem">Set the corporate rate at 25%. Offer small-business tax break: 1% rate on first $100K profit, 5% on next $1M, 10% on next $10M.</td>
-                    </tr>
-                    <tr>
-                        <td>Corporate Inversion</td>
-                        <td class="old-dem">Reduced the corporate tax rate from 35% to 21% to make the U.S. HQ more competitive.</td>
-                        <td class="new-dem">Create anti-inversion rules that treat companies as U.S. entities if they have significant U.S. operations regardless of technical headquarters location.</td>
-                    </tr>
-                    <tr>
-                        <td>Social Services</td>
-                        <td class="old-dem">Push universal programs like Medicare for All ($32T over 10 years, CBO 2023).</td>
-                        <td class="new-dem">Fund core programs—e.g., $80B/year for Medicaid, $50B for SNAP—but cap growth at inflation +2%.</td>
-                    </tr>
-                    <tr>
-                        <td>National Defense & Terrorism</td>
-                        <td class="old-dem">Strong defense with focus on diplomacy, cyber threats, and targeted anti-terrorism.</td>
-                        <td class="new-dem">Cap defense at $875B/year, growing with inflation (2-3%), prioritizing modernization—e.g., $25B for AI/cyber.</td>
-                    </tr>
-                    <tr>
-                        <td>Debt & Approach to GDP</td>
-                        <td class="old-dem">Manage debt as a percentage of GDP with growth-focused investments, not just cuts.</td>
-                        <td class="new-dem">Stress debt control with growth plans (e.g., infrastructure ROI) to ease deficit hawk concerns.</td>
-                    </tr>
-                    <tr>
-                        <td>Global Shared Responsibility</td>
-                        <td class="old-dem">Lead on global issues (climate, health) via cooperation and funding international bodies.</td>
-                        <td class="new-dem">Scale back global funding rhetoric; focus on U.S.-led wins (e.g., vaccine tech) to counter "America last" fears.</td>
-                    </tr>
-                    <tr>
-                        <td>Climate & Energy</td>
-                        <td class="old-dem">Transition to renewables; phase out fossil fuels with worker support.</td>
-                        <td class="new-dem">Blend renewables with "all-of-the-above" energy but with a full-force revival of nuclear energy.</td>
-                    </tr>
-                    <tr>
-                        <td>Education</td>
-                        <td class="old-dem">Increase public education funding, universal pre-K, affordable college.</td>
-                        <td class="new-dem">Add vocational training and apprenticeship focus to win working-class families and youth.</td>
-                    </tr>
-                    <tr>
-                        <td>Illegal Drugs</td>
-                        <td class="old-dem">Decriminalize marijuana, focus on treatment over punishment for addiction.</td>
-                        <td class="new-dem">Push marijuana legalization as a state revenue win; frame treatment as "tough on crime" via recovery.</td>
-                    </tr>
-                    <tr>
-                        <td>Law Enforcement</td>
-                        <td class="old-dem">Reform the police; focus on racial bias and excessive use of force.</td>
-                        <td class="new-dem">Fund the police, fix the issues. Back the blue, while addressing underlying crime concerns.</td>
-                    </tr>
-                    <tr>
-                        <td>Socialism vs Capitalism</td>
-                        <td class="old-dem">Okay to have socialists in the party and to belittle the value of capitalism.</td>
-                        <td class="new-dem">Strong, clear support for capitalism.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
-        <h2 class="section-title">Constitutional Concerns</h2>
+        <div class="issue-header">Transportation</div>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Issue</th>
                         <th>Old Democratic Position</th>
                         <th>New Democratic Position</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Abortion</td>
-                        <td class="old-dem">Protect reproductive rights as a federal guarantee; codify Roe v. Wade principles.</td>
-                        <td class="new-dem">Defend choice but allow state nuance (e.g., late-term limits) to soften opposition in red-leaning areas.</td>
-                    </tr>
-                    <tr>
-                        <td>Freedom of Speech</td>
-                        <td class="old-dem">Defend speech but regulate hate speech and misinformation online.</td>
-                        <td class="new-dem">Drop heavy regulation talk; focus on platform accountability to misinformation, appealing to free speech fans.</td>
-                    </tr>
-                    <tr>
-                        <td>LGBTQ</td>
-                        <td class="old-dem">Expand federal protections for marriage, employment, and identity.</td>
-                        <td class="new-dem">Keep protections but pivot to "equality for all" framing, avoiding culture war traps to win moderates.</td>
-                    </tr>
-                    <tr>
-                        <td>Unhoused Citizens</td>
-                        <td class="old-dem">Fund housing-first programs and social services to address root causes. Allow/enable unhealthy encampments.</td>
-                        <td class="new-dem">Add work requirements to housing aid; pitch it as "hand up, not handout" to counter welfare critiques. No camping - tiered government housing.</td>
-                    </tr>
-                    <tr>
-                        <td>Affirmative Action</td>
-                        <td class="old-dem">Fight to preserve race-based admissions. Extend to jobs, contracts, (10% federal contracts for minority-owned firms).</td>
-                        <td class="new-dem">Shift to socioeconomic boosts—e.g., prioritize aid/admissions for first-gen, low-income students ($75K household cap), regardless of race.</td>
-                    </tr>
-                    <tr>
-                        <td>Guns & Right to Bear Arms</td>
-                        <td class="old-dem">Universal background checks, assault weapon bans, and red flag laws.</td>
-                        <td class="new-dem">No change.</td>
+                        <td class="old-dem">
+                            Invest heavily in public transit, EVs, and infrastructure repair.
+                            <div class="expanded-content">
+                                Democrats traditionally spread transportation funding across many competing priorities without clear national vision. This approach often failed to create transformative systems that could compete with private automobile convenience. Public transit initiatives frequently faced cost overruns and operational inefficiencies. EV incentives primarily benefited higher-income households that could afford premium electric vehicles.
+                            </div>
+                        </td>
+                        <td class="new-dem">
+                            All-in on a national high-speed rail network similar to systems in Europe, Japan, and China.
+                            <div class="expanded-content">
+                                Democrats now prioritize building a world-class high-speed rail system connecting major population centers. This bold infrastructure vision creates hundreds of thousands of construction and manufacturing jobs across multiple states. Completed networks would reduce carbon emissions while boosting economic productivity through improved mobility. This approach competes directly with China's infrastructure investments with a distinctly American vision.
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
-        <footer>
-            Project 2026: A New Democratic Party
-        </footer>
-    </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all cell contents
-            const cells = document.querySelectorAll('.cell-content');
-            
-            cells.forEach(cell => {
-                cell.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+        <!-- Sections continued with the established pattern -->
+        
+        <div class="issue-header">Legal Immigration</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Increasing refugee and asylum caps, and address root causes of migration through foreign aid.
+                            <div class="expanded-content">
+                                Previous Democratic positions emphasized humanitarian concerns with less focus on economic and workforce needs. This approach often seemed disconnected from domestic labor market realities and skills gaps. Foreign aid programs to address "root causes" showed limited effectiveness despite significant investment. Policy failed to create political consensus around legal immigration reforms.
+                            </div>
+                        </td>
+                        <td class="new-dem">
+                            Tie legal immigration to labor needs—e.g., 100K visas/year for agriculture/tech, adjustable by unemployment rates. Increase H1B, J1, O1 for "extraordinary ability" roles.
+                            <div class="expanded-content">
+                                Democrats now advocate for a dynamic immigration system responding to actual labor market needs across skill levels. Visa allocations adjust based on economic conditions and specific industry requirements. The approach prioritizes attraction and retention of top global talent while also addressing agricultural and service sector labor needs. This framework builds broader support by directly connecting immigration to economic prosperity.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Personal Debt Relief</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Mass loan forgiveness.
+                            <div class="expanded-content">
+                                Previous Democratic positions focused on broad student loan forgiveness regardless of income or career choices. This approach faced criticism for benefiting higher-income college graduates at taxpayer expense. Policy failed to address underlying costs driving student debt accumulation. This position appeared to favor college-educated voters over those without degrees.
+                            </div>
+                        </td>
+                        <td class="new-dem">
+                            Stop loan forgiveness. Start low-interest refinancing for federal loans only in special circumstances.
+                            <div class="expanded-content">
+                                The new approach focuses on targeted relief through refinancing options rather than blanket forgiveness. This position addresses genuine hardship cases while maintaining loan repayment expectations for those who can afford it. Policy includes expanded income-based repayment options with reasonable caps on monthly payments. This balanced approach is more fiscally responsible while still addressing the most serious debt burdens.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">National Debt</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            $1.9T American Rescue Plan and $1T Infrastructure Act (2021) spiked debt by $3T+; Protect Social Security, Medicare—adding $20T to future liabilities.
+                        </td>
+                        <td class="new-dem">
+                            Commit to a 110% debt-to-GDP cap by 2035. Achieved via 1% annual discretionary cuts. Citizens see their portion of US Debt at tax season.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Taxes</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Hike corporate taxes to 28%. Doubled standard deduction to $12K.
+                        </td>
+                        <td class="new-dem">
+                            Set the corporate rate at 25%. Offer small-business tax break: 1% rate on first $100K profit, 5% on next $1M, 10% on next $10M.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Corporate Inversion</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Reduced the corporate tax rate from 35% to 21% to make the U.S. HQ more competitive.
+                        </td>
+                        <td class="new-dem">
+                            Create anti-inversion rules that treat companies as U.S. entities if they have significant U.S. operations regardless of technical headquarters location.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Social Services</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Push universal programs like Medicare for All ($32T over 10 years, CBO 2023).
+                        </td>
+                        <td class="new-dem">
+                            Fund core programs—e.g., $80B/year for Medicaid, $50B for SNAP—but cap growth at inflation +2%.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Free Trade, Fair Trade and Tariffs</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Support fair trade with labor/environmental standards; use targeted tariffs strategically.
+                            <div class="expanded-content">
+                                Previous Democratic trade positions tried balancing free trade principles with labor and environmental protections. This approach often faced criticism from both business interests concerned about competitiveness and labor groups worried about job losses. Policy positions frequently appeared inconsistent, shifting based on constituent pressures. Trade deals contained standards that were difficult to enforce effectively.
+                            </div>
+                        </td>
+                        <td class="new-dem">
+                            "Smart Trade, Not Tariffs" use tax incentives for domestic manufacturing, not blunt tariffs.
+                            <div class="expanded-content">
+                                The new Democratic approach shifts from punitive tariffs to proactive incentives for domestic production through tax policy. This framework emphasizes positive inducements for reshoring rather than penalties for offshoring. Trade policy explicitly prioritizes strategic supply chains in areas like semiconductors, pharmaceuticals, and clean energy. The approach includes robust worker retraining programs for those displaced by remaining trade impacts.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="issue-header">Illegal Immigration & Borders</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Old Democratic Position</th>
+                        <th>New Democratic Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="old-dem">
+                            Pathways to citizenship: 8-year citizenship track for 11M, including DACA "Dreamers; Limit ICE scope & end family separations.
+                            <div class="expanded-content">
+                                Traditional Democratic immigration policy focused primarily on legalization pathways with less emphasis on border security enforcement. This approach faced significant political obstacles and appeared to prioritize undocumented immigrants over border community concerns. Policy positions often failed to acknowledge legitimate security and resource challenges created by irregular migration. This created vulnerability to accusations of supporting "open borders."
+                            </div>
+                        </td>
+                        <td class="new-dem">
+                            ICE is focused only on serious criminals. Finish the wall. Invest in more high tech sensors. Replace DACA's protections with a merit-driven system.
+                            <div class="expanded-content">
+                                The new approach balances enhanced physical and technological border security with targeted enforcement priorities. This position acknowledges border communities' concerns while maintaining humane treatment of migrants and asylum seekers. Merit-based immigration reforms focus on skills, education, and economic contributions rather than family ties alone. This balanced framework addresses both security and economic needs while being less politically divisive.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
