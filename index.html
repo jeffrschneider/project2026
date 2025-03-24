@@ -149,45 +149,23 @@
                 font-size: 2rem;
             }
             
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            table {
+                min-width: 100%;
+            }
+            
             td, th {
                 padding: 10px;
+                display: table-cell;
+                word-wrap: break-word;
             }
             
-            table, thead, tbody, th, td, tr {
-                display: block;
+            .expanded-content {
+                word-wrap: break-word;
             }
-            
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            
-            tr {
-                margin-bottom: 15px;
-                border-bottom: 2px solid var(--dem-blue);
-            }
-            
-            td {
-                position: relative;
-                padding-left: 40%;
-                border: none;
-                border-bottom: 1px solid #eee;
-            }
-            
-            td:before {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                width: 35%;
-                padding-right: 10px;
-                white-space: nowrap;
-                font-weight: 600;
-            }
-            
-            /* Adjusted labels for mobile view */
-            td:nth-of-type(1):before { content: "Republican"; font-size: 0.85rem; }
-            td:nth-of-type(2):before { content: "Democratic Position"; }
         }
     </style>
 </head>
@@ -224,7 +202,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -252,7 +230,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -280,7 +258,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -308,7 +286,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -336,7 +314,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -364,7 +342,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -392,7 +370,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -420,7 +398,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -448,7 +426,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -476,7 +454,7 @@
                 <thead>
                     <tr>
                         <th>Republican Position</th>
-                        <th>Democratic Position</th>
+                        <th>Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -506,7 +484,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -534,7 +512,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -562,7 +540,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -584,7 +562,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -608,7 +586,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -636,7 +614,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -666,7 +644,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -694,7 +672,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -708,7 +686,7 @@
                         <td class="new-dem">
                             Stop loan forgiveness. Start low-interest refinancing for federal loans only in special circumstances.
                             <div class="expanded-content">
-                                The new approach focuses on targeted relief through refinancing options rather than blanket forgiveness. This position addresses genuine hardship cases while maintaining loan repayment expectations for those who can afford it. Policy includes expanded income-based repayment options with reasonable caps on monthly payments. This balanced approach is more fiscally responsible while still addressing the most serious debt burdens.
+                                The new approach focuses on targeted relief through refinancing options rather than blanket forgiveness. This position addresses genuine hardship cases while maintaining loan repayment expectations for those who can afford it.                             Policy includes expanded income-based repayment options with reasonable caps on monthly payments. This balanced approach is more fiscally responsible while still addressing the most serious debt burdens.
                             </div>
                         </td>
                     </tr>
@@ -722,7 +700,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -744,7 +722,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -766,7 +744,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -788,7 +766,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -810,7 +788,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -838,7 +816,7 @@
                 <thead>
                     <tr>
                         <th>Old Democratic Position</th>
-                        <th>New Democratic Position</th>
+                        <th>New Democratic</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -859,3 +837,12 @@
                 </tbody>
             </table>
         </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Project 2026 - A Vision for America's Future</p>
+        </div>
+    </footer>
+</body>
+</html>
